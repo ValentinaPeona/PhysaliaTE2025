@@ -100,7 +100,7 @@ You can now run `RepeatMasker` on `ramVar` genome using the (partially) curated 
 I put all the output files in `~/Share/TE25/Practical1/RMSK`. You can copy everything in your working directory.
 
 ```bash
-cp -r ~/Share/TE25/Practical1/RMSK ~/TE25/Practical1
+cp -r ~/Share/TE25/Practical1/RMSK ~/TE25/Practical1/
 ```
 
 In the output directories then you will find several output files:
