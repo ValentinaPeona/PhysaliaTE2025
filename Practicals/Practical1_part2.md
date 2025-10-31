@@ -100,7 +100,7 @@ You can now run `RepeatMasker` on `ramVar` genome using the (partially) curated 
 I put all the output files in `~/Share/TE25/Practical1/RMSK`. You can copy everything in your working directory.
 
 ```bash
-cp -r ~/TE25/Share/Practical1/RMSK ~/TE25/Practical1/RMSK
+cp -r ~/Share/TE25/Practical1/RMSK ~/TE25/Practical1/RMSK
 ```
 
 In the output directories then you will find several output files:
@@ -139,12 +139,12 @@ Here
 cd ~/TE25/Practical1/RMSK/ramVar_rm1.0
 
 # Calculate the divergence with Kimura 2-parameter distances (excluding CpG sites)
-calcDivergenceFromAlign.pl -s ramVar.fasta.align.divsum -a ramVar.fasta.align_with_div ramVar.fasta.align
+singularity exec ~/Share/TE25/dfam-tetools-latest.sif calcDivergenceFromAlign.pl -s ramVar.fasta.align.divsum -a ramVar.fasta.align_with_div ramVar.fasta.align
 
 cd ../ramVar_rm2.0
 
 # Calculate the divergence with Kimura 2-parameter distances (excluding CpG sites)
-calcDivergenceFromAlign.pl -s ramVar.fasta.align.divsum -a ramVar.fasta.align_with_div ramVar.fasta.align
+singularity exec ~/Share/TE25/dfam-tetools-latest.sif calcDivergenceFromAlign.pl -s ramVar.fasta.align.divsum -a ramVar.fasta.align_with_div ramVar.fasta.align
 ```
 
 What is `-s`? What is `-a`?
@@ -167,11 +167,11 @@ To make a nice and fast landscape plot we can easily use another RepeatMasker sc
 
 cd ~/TE25/Practical1/RMSK/ramVar_rm1.0
 SIZE=`grep -i 'total length' ramVar.fasta.tbl | tr -s ' ' | cut -f 3 -d ' '`
-createRepeatLandscape.pl -div ramVar.fasta.align.divsum -g $SIZE > ramVar.fasta.align.divsum.html
+singularity exec ~/Share/TE25/dfam-tetools-latest.sif createRepeatLandscape.pl -div ramVar.fasta.align.divsum -g $SIZE > ramVar.fasta.align.divsum.html
 
 cd ../ramVar_rm2.0
 SIZE=`grep -i 'total length' ramVar.fasta.tbl | tr -s ' ' | cut -f 3 -d ' '`
-createRepeatLandscape.pl -div ramVar.fasta.align.divsum -g $SIZE > ramVar.fasta.align.divsum.html
+singularity exec ~/Share/TE25/dfam-tetools-latest.sif createRepeatLandscape.pl -div ramVar.fasta.align.divsum -g $SIZE > ramVar.fasta.align.divsum.html
 ```
 
 What is `-g`?
@@ -221,7 +221,7 @@ awk '(NR>3){$6=$6-1; print $5,$6,$7,$10,$11,$9}' OFS="\t" ramVar.fasta.out > ram
 GFF files are as useful as BED files therefore let's see how to convert the `.out` file into a GFF using a RepeatMasker util script:
 
 ```bash
-rmOutToGFF3.pl  ramVar.fasta.out > ramVar.fasta.out.gff
+singularity exec ~/Share/TE25/dfam-tetools-latest.sif rmOutToGFF3.pl  ramVar.fasta.out > ramVar.fasta.out.gff
 ```
 
 Note that you can always tell RepeatMasker itself to generate a GFF file in addition to the out file with the option `-gff`.
@@ -231,7 +231,7 @@ Note that you can always tell RepeatMasker itself to generate a GFF file in addi
 The script `rmOut2Fasta.pl` is an easy and fast way to get a fasta file from the `.out` file:
 
 ```bash
-rmOut2Fasta.pl -fasta ramVar.fasta -out ramVar.fasta.out
+singularity exec ~/Share/TE25/dfam-tetools-latest.sif rmOut2Fasta.pl -fasta ramVar.fasta -out ramVar.fasta.out
 ```
 
 It can also be done using a BED file (+ the original fasta file) and the function `bedtools getfasta` from BEDTools.
