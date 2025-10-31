@@ -10,7 +10,7 @@
 
 Obtaining a high quality repeat library that encompasses the entire diversity of repeats present in the genome of interest is key to get reliable downstream analyses related to transposable elements.
 
-If you work on model organisms, it is  likely that the diversity of transposable elements of your species has already been characterised and that you can find a library of consensus sequences avaialable on databases like (Repbase)[https://www.girinst.org/repbase/] and (Dfam)[https://www.dfam.org]. In this case, it is not essential to run tools like `RepeatModeler2`. This can be true also if your species of interest is closely related to a species whose transposable elements have been already characterised. However, we find over and over that masking a genome of a new species using repeat libraries from other species can be insufficient. This happens when the genome of interest contains species-specific repetitive elements never described before and these elements would remain largely unmasked or partially and/or incorrectly annotated. Furthermore, curated repeat libraries from sister species can actually reciprocally help the annotation of the two genomes [Boman et al. 2018](https://www.mdpi.com/2073-4425/10/4/301).
+If you work on model organisms, it is  likely that the diversity of transposable elements of your species has already been characterised and that you can find a library of consensus sequences avaialable on databases like [Repbase](https://www.girinst.org/repbase/) and [Dfam](https://www.dfam.org). In this case, it is not essential to run tools like `RepeatModeler2`. This can be true also if your species of interest is closely related to a species whose transposable elements have been already characterised. However, we find over and over that masking a genome of a new species using repeat libraries from other species can be insufficient. This happens when the genome of interest contains species-specific repetitive elements never described before and these elements would remain largely unmasked or partially and/or incorrectly annotated. Furthermore, curated repeat libraries from sister species can actually reciprocally help the annotation of the two genomes [Boman et al. 2018](https://www.mdpi.com/2073-4425/10/4/301).
 
 
 
@@ -243,7 +243,7 @@ Most likely, the repeat library just produced here does not meet all these crite
 
 </details>
 
-:note: Note that the header names of the consensus sequences in the `consensi.fa.classified` follows a precise nomenclature and style which is necessary for RepeatMasker to give you correct abundance estimates for each kind of TE.
+:warning: Note that the header names of the consensus sequences in the `consensi.fa.classified` follow a precise nomenclature and style which is necessary for RepeatMasker to give you correct abundance estimates for each kind of TE.
 
 ---
 
