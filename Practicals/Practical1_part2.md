@@ -226,16 +226,6 @@ singularity exec ~/Share/TE25/dfam-tetools-latest.sif rmOutToGFF3.pl  ramVar.fas
 
 Note that you can always tell RepeatMasker itself to generate a GFF file in addition to the out file with the option `-gff`.
 
-### Get sequences from the .out file 
-
-The script `rmOut2Fasta.pl` is an easy and fast way to get a fasta file from the `.out` file:
-
-```bash
-singularity exec ~/Share/TE25/dfam-tetools-latest.sif rmOut2Fasta.pl -fasta ramVar.fasta -out ramVar.fasta.out
-```
-
-It can also be done using a BED file (+ the original fasta file) and the function `bedtools getfasta` from BEDTools.
-
 ### Make a hard-masked (NNN) version of the soft-masked (lowercase) .masked file 
 
 Sometimes it is useful to have a hard masked version of the genome and we can do this with a simple perl command:
