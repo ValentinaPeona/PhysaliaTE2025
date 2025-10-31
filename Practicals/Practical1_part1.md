@@ -39,7 +39,7 @@ To run `RepeatModeler2` we need a genome of interest (target genome) and we will
 - [ ] inspect the outout of `RepeatModeler2` and describe what a repeat library and consensus sequences are
 
 #### ⚠️ Note
-Given the short time within the course, you will not be able to fully run the `RepeatModeler2` commands, therefore we generated all the output for you that can be found in the folder `~/Share/Practical1/`. We suggest you to follow the tutorial and try the commands out but kill the analysis right after. All the output necessary is available to you in any moment!
+Given the short time within the course, you will not be able to fully run the `RepeatModeler2` commands, therefore we generated all the output for you that can be found in the folder `~/Share/TE25/Practical1/`. We suggest you to follow the tutorial and try the commands out but kill the analysis right after. All the output necessary is available to you in any moment!
 
 
 ---
