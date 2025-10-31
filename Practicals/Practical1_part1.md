@@ -110,7 +110,6 @@ The core of the `RepeatModeler2` pipeline (illustrated above in **Figure 1**) co
 On the Amazon server we installed `RepeatModeler2` in a conda environment that you can activate like this:
 
 ```bash
-conda activate te25
 singularity exec ~/Share/TE25/dfam-tetools-latest.sif RepeatModeler
 ```
 
@@ -130,7 +129,7 @@ As first thing call the command `BuildDatabase`, look at the options and run it 
 # STEP1: create a database for the genome. We put the database in the Data folder together with the genome assembly
 # BuildDatabase takes about 1 minute to run
 # BuildDatabase [-options] -name <name of the database> <genome file>
-BuildDatabase -name Data/ramVar Data/ramVar.fasta
+singularity exec ~/Share/TE25/dfam-tetools-latest.sif BuildDatabase -name Data/ramVar Data/ramVar.fasta
 ```
 
 </details>
@@ -151,10 +150,8 @@ Run RepeatModeler2 on the tardigrade genome.
 
 ```bash
 # STEP2: run RepeatModeler2 on the database you just created
-RepeatModeler -database Data/ramVar
+singularity exec ~/Share/TE25/dfam-tetools-latest.sif RepeatModeler -database Data/ramVar -LTRStruct
 ```
-
-⚠️ The conda installation on the AWS doesn't include the software for the LTRStruct!
 
 </details>
 
@@ -162,17 +159,15 @@ RepeatModeler -database Data/ramVar
 
 Once you managed to start `RepeatModeler2`, let it run for a minute or two (or until you lose your patience) to see the very first round of repeat prediction start and then please kill the command with `Ctrl + C` as we do not have the time to let it finish. You will see that a folder with a name similar to this `RM_1962636.MonJan131517222025` has been created in your working directory that contains the intermediate files of the RepeatModeler2 pipeline. You can give it a look and then you can jump directly to the final output files of the pipeline.
 
-:exclamation: Copy the output from the `~/Share/TE25/Practical1/RMDL` folder to yours:
+❗**Copy the output files in your own RMDL folder**
+```bash
+cp -r ~/Share/TE25/Practical1/RMDL ~/TE25/Practical1/
+```
 
 As you can see there are two commands to run to get the final output from the tool (the library of raw consensus sequences). The first command creates a database of your genome assembly fasta file, basically it indexes the fasta to better access it during the de-novo characterisation similarly to what BLAST does. Indeed, most of the `RepeatModeler2` analysis consists of a large number of alignments.
 
 #### 📌 Note
 When you're going to run `RepeatModeler2` and `RepeatMasker` on your fasta files, pay attention to the presence of strange/special characters in your fasta headers, they may cause problems during the analysis. Also, it is suggested to have rather short fasta headers or they will be cut and you may lose some important pieces of information: this is of particular importance when running RepeatMasker.
-
-❗**Copy the output files in your own RMDL folder**
-```bash
-cp -r ~/Share/TE25/Practical1/RMDL ~/TE25/Practical1/RMDL
-```
 
 ---
 
