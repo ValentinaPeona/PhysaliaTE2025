@@ -3,5 +3,5 @@
 Tutorials for the course "Bioinformatic analysis of transposable elements" in 2025 by Physalia.
 
 TE annotation and discovery
-- part 1
-- part 2
+- [part1](https://github.com/ValentinaPeona/PhysaliaTE2025/blob/main/Practicals/Practical1_part1.md): use of RepeatModeler2
+- [part 2](https://github.com/ValentinaPeona/PhysaliaTE2025/blob/main/Practicals/Practical1_part2.md): use of RepeatMasker
