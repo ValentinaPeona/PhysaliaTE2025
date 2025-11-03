@@ -43,7 +43,6 @@ Given the short time within the course, you will not be able to fully run the `R
 
 
 ---
-# Part 1
 
 ## Getting ready
 
