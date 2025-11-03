@@ -107,7 +107,7 @@ A run of `RepeatModeler2` on a genome consists of two steps:
 
 The core of the `RepeatModeler2` pipeline (illustrated above in **Figure 1**) consists of up to 6 rounds of sequence subsampling of your genome. Each round subsamples chunks of your genome of different sizes and on each of these chunks, several tools are run to identify both tandem and interspersed repeats. At the end of each round, multisequence alignments of repetitive elements are created and consensus sequences are produced on top of them and stored in the `consensi.fa` file. `RepeatModeler2` can also run an optional additional pipeline called `LTRstruct` particularly dedicated to improve the characterisation of LTR retrotransposons.
 
-On the Amazon server we installed `RepeatModeler2` in a conda environment that you can activate like this:
+On the Amazon server we installed `RepeatModeler2` with Singularity and it can be called like this:
 
 ```bash
 singularity exec ~/Share/TE25/dfam-tetools-latest.sif RepeatModeler
