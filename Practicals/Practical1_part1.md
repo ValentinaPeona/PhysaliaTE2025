@@ -149,7 +149,7 @@ Run RepeatModeler2 on the tardigrade genome.
 
 ```bash
 # STEP2: run RepeatModeler2 on the database you just created
-singularity exec ~/Share/TE25/dfam-tetools-latest.sif RepeatModeler -database Data/ramVar -LTRStruct
+singularity exec ~/Share/TE25/dfam-tetools-latest.sif RepeatModeler -database Data/ramVar -LTRStruct -threads 4
 ```
 
 </details>
