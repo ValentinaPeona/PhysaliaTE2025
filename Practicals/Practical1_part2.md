@@ -92,7 +92,7 @@ cp ~/Share/TE25/Practical1/Data/ramVar_rm* ~/TE25/Practical1/Data/
 cd ~/TE25/Practical1
 
 # run RepeatMasker with uncurated ramVar_rm1.0.fasta library
-RepeatMasker -pa 1 -a -xsmall -gccalc -excln -gff -s -dir RMSK/ramVar_rm1.0 -lib Data/ramVar_rm1.0.fasta Data/ramVar.fasta
+singularity exec ~/Share/TE25/dfam-tetools-latest.sif RepeatMasker -pa 1 -a -xsmall -gccalc -excln -gff -s -dir RMSK/ramVar_rm1.0 -lib Data/ramVar_rm1.0.fasta Data/ramVar.fasta
 ```
 
 You can now run `RepeatMasker` on `ramVar` genome using the (partially) curated library `ramVar_rm2.0.fasta`.
