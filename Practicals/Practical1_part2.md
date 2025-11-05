@@ -111,6 +111,8 @@ the main and most important output file of RepeatMasker. This files contains 15 
 Which is the column containing the divergence from consensus?
 What do the columns 8 and 14 mean?
 
+The entire description of the columns can be found [here](https://link.springer.com/protocol/10.1007/978-1-0716-4583-3_5) and in [RepeatMasker documentation](https://www.repeatmasker.org/webrepeatmaskerhelp.html).
+
 #### .align
 the `.align` file contains all the alignments found by RepeatMasker and give some supplementary information about the alignment statistics. This file is important to keep for some downstream analysis below.
 
@@ -186,6 +188,8 @@ Do they look the same? What did it change?
 For more comparisons and more details, you can look at this comprehensive [figure](https://link.springer.com/article/10.1186/s13100-024-00319-8#Fig4): *Ramazzottius varieornatus* is on the bottom row.
 
 ![landscape_plot](figure4.png)
+
+❗These and more RepeatMasker scripts are present in the installation and you can see the list of them on the [RepeatMasker github page](https://github.com/Dfam-consortium/RepeatMasker/tree/master/util).
 
 --- 
 
